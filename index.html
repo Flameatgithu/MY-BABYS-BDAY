@@ -1,0 +1,252 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="An interactive birthday letter for Alishba — a heartfelt note, four poems, a cake with candles to blow out, a small quiz, and one sealed surprise." />
+  <meta name="theme-color" content="#FBF3EA" />
+  <title>Happy Birthday, Alishba</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23C4485C'%3E%3Cpath d='M12 21.35 10.55 20.03C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z'/%3E%3C/svg%3E" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600&family=Pinyon+Script&display=swap" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <a class="skip-link" href="#letter">Skip to the letter</a>
+
+  <canvas id="fx" class="fx" aria-hidden="true"></canvas>
+
+  <nav class="rail" aria-label="Chapters">
+    <ul>
+      <li><a href="#hero"     data-rail="hero"><span class="rail-dot"></span><span class="rail-label">welcome</span></a></li>
+      <li><a href="#letter"   data-rail="letter"><span class="rail-dot"></span><span class="rail-label">the letter</span></a></li>
+      <li><a href="#poems"    data-rail="poems"><span class="rail-dot"></span><span class="rail-label">four poems</span></a></li>
+      <li><a href="#notes"    data-rail="notes"><span class="rail-dot"></span><span class="rail-label">small notes</span></a></li>
+      <li><a href="#quiz"     data-rail="quiz"><span class="rail-dot"></span><span class="rail-label">the quiz</span></a></li>
+      <li><a href="#cake"     data-rail="cake"><span class="rail-dot"></span><span class="rail-label">the cake</span></a></li>
+      <li><a href="#surprise" data-rail="surprise"><span class="rail-dot"></span><span class="rail-label">sealed note</span></a></li>
+      <li><a href="#finale"   data-rail="finale"><span class="rail-dot"></span><span class="rail-label">joyeux</span></a></li>
+    </ul>
+  </nav>
+
+  <button id="music-toggle" class="music-btn" type="button" aria-pressed="false" aria-label="Play soft background music">
+    <svg class="icon music-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+      <path d="M9 18V5l10-2v13"></path><circle cx="6" cy="18" r="3"></circle><circle cx="16" cy="16" r="3"></circle>
+    </svg>
+    <span class="music-label" data-music-label>Play soft music</span>
+    <span class="music-waves" aria-hidden="true"><span></span><span></span><span></span></span>
+  </button>
+
+  <main>
+    <!-- ════════════════ HERO · warm candlelight ════════════════ -->
+    <section class="section hero" id="hero" data-theme="candle" aria-labelledby="hero-title">
+      <div class="dust" aria-hidden="true"></div>
+      <div class="wrap hero-inner">
+        <p class="eyebrow" data-reveal>a small corner of the internet, wrapped just for you</p>
+        <h1 id="hero-title" class="hero-title" data-reveal>
+          <span class="hero-line">Happy Birthday,</span>
+          <span class="hero-name script-glow" data-config="greeting">Meri Pyari Alishba</span>
+        </h1>
+        <p class="lede" data-reveal>
+          No ads, no algorithm, no feed. Just one page, built slowly and on purpose,
+          with you in every scroll. Take your time, <span data-config="nickname">sweetheart</span> —
+          everything here is yours.
+        </p>
+        <div class="hero-actions" data-reveal>
+          <a class="btn btn-solid" href="#letter">Begin with the letter</a>
+          <a class="btn btn-ghost" href="#cake">Skip to the cake</a>
+        </div>
+        <p class="hero-hint" data-reveal>about eight small minutes of happiness ahead · headphones optional, smiling likely</p>
+        <a class="scroll-cue" href="#letter" aria-label="Scroll down to the letter">
+          <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+          scroll gently
+        </a>
+      </div>
+    </section>
+
+    <!-- ════════════════ LETTER · timeless editorial ════════════════ -->
+    <section class="section letter" id="letter" data-theme="paper" aria-labelledby="letter-title">
+      <div class="wrap narrow">
+        <header class="section-head" data-reveal>
+          <div class="orn" aria-hidden="true"><svg class="icon" viewBox="0 0 24 24" fill="currentColor"><path d="M12 21.35 10.55 20.03C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg></div>
+          <p class="kicker">chapter one · in my handwriting, if only</p>
+          <h2 id="letter-title" data-reveal>The letter</h2>
+        </header>
+
+        <article class="letter-sheet" data-reveal>
+          <p class="letter-greeting" data-config="letter.greeting">My dearest Alishba,</p>
+          <div class="letter-body" id="letter-body"><!-- paragraphs injected from config.js --></div>
+          <p class="letter-signoff" data-config="letter.signoff">Yours — today, tomorrow, and every ordinary day after,</p>
+          <p class="letter-name script" data-config="letter.name">[your name]</p>
+          <p class="letter-ps"><span aria-hidden="true">✎</span> From the love of your life — presented with both hands, and just a touch too much pride.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- ════════════════ POEMS · starry night ════════════════ -->
+    <section class="section poems" id="poems" data-theme="night" aria-labelledby="poems-title">
+      <div class="sky dust" aria-hidden="true"></div>
+      <div class="wrap narrow">
+        <header class="section-head" data-reveal>
+          <div class="orn" aria-hidden="true"><svg class="icon" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.6 7.1.7-5.4 4.8 1.6 7-6.2-3.7-6.2 3.7 1.6-7L2 9.3l7.1-.7L12 2z"/></svg></div>
+          <p class="kicker">chapter two · read slowly, out loud if you dare</p>
+          <h2 id="poems-title" data-reveal>Four poems, after dark</h2>
+          <p class="section-intro" data-reveal>
+            It's late somewhere, the sky is doing its slow silver paperwork,
+            and every poem under it tonight is about a girl the stars keep mentioning.
+          </p>
+        </header>
+        <div class="poem-list" id="poem-list"><!-- poems injected from config.js --></div>
+      </div>
+    </section>
+
+    <!-- ════════════════ NOTES · playful pastel ════════════════ -->
+    <section class="section notes" id="notes" data-theme="candy" aria-labelledby="notes-title">
+      <div class="wrap">
+        <header class="section-head" data-reveal>
+          <div class="orn" aria-hidden="true"><svg class="icon" viewBox="0 0 24 24" fill="currentColor"><path d="M12 21.35 10.55 20.03C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg></div>
+          <p class="kicker">chapter three · small notes, big feelings</p>
+          <h2 id="notes-title" data-reveal>Little things I keep in my pockets</h2>
+          <p class="section-intro" data-reveal>
+            Trinkets, truths, and things I'd whisper if whispering came with a save button.
+            A few of these are placeholders wearing a nice outfit — you know which.
+          </p>
+        </header>
+        <div class="note-grid" id="note-grid"><!-- notes injected from config.js --></div>
+
+        <div class="photo-strip" id="photo-strip" aria-label="Photo strip">
+          <!-- polaroid slots injected from config.js -->
+        </div>
+      </div>
+    </section>
+
+    <!-- ════════════════ QUIZ · pastel, competitive ════════════════ -->
+    <section class="section quiz" id="quiz" data-theme="candy" aria-labelledby="quiz-title">
+      <div class="wrap narrow">
+        <header class="section-head" data-reveal>
+          <div class="orn" aria-hidden="true"><svg class="icon" viewBox="0 0 24 24" fill="currentColor"><path d="M3 18l1.4-9.2L9 12l3-7.5L15 12l4.6-3.2L21 18H3zm1 2.5h16v1.6H4v-1.6z"/></svg></div>
+          <p class="kicker">chapter four · gentle competition</p>
+          <h2 id="quiz-title" data-reveal>The “how much does he love you” quiz</h2>
+          <p class="section-intro" data-reveal>
+            Five questions. Impossible to fail, technically — every wrong answer
+            still comes with love attached. Tap an answer; affection will follow.
+          </p>
+        </header>
+
+        <div class="quiz-card" data-reveal>
+          <div id="quiz-stage" class="quiz-stage" aria-live="polite">
+            <noscript><p class="quiz-noscript">The quiz needs JavaScript to wake up — but the love is already delivered.</p></noscript>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ════════════════ CAKE · dusk, candle glow ════════════════ -->
+    <section class="section cake-section" id="cake" data-theme="dusk" aria-labelledby="cake-title">
+      <div class="wrap">
+        <header class="section-head" data-reveal>
+          <div class="orn" aria-hidden="true"><svg class="icon" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2c1.5 2.5 3.5 4 3.5 6.5A3.5 3.5 0 0 1 12 12a3.5 3.5 0 0 1-3.5-3.5C8.5 6 10.5 4.5 12 2zm0 10c3 2 5.5 4.2 5.5 7a2.5 2.5 0 0 1-5 .2h-1A2.5 2.5 0 0 1 6.5 19c0-2.8 2.5-5 5.5-7z"/></svg></div>
+          <p class="kicker">chapter five · the cake is not a lie</p>
+          <h2 id="cake-title" data-reveal>Ready? It's candle time.</h2>
+          <p class="section-intro" data-reveal>
+            Zero calories, five candles, one birthday girl.
+            Tap each flame — or press Enter on one — and blow this little
+            room into celebration mode.
+          </p>
+        </header>
+
+        <div class="cake-wrap" data-reveal>
+          <div class="cake-glow" aria-hidden="true"></div>
+
+          <div class="cake" id="cake-build" aria-label="Birthday cake with candles">
+            <div class="cake-top" aria-hidden="true"><span class="cake-name" data-config="cake.topping">Alishba</span></div>
+            <div class="cake-tier cake-tier-top" aria-hidden="true"></div>
+            <div class="cake-tier cake-tier-bottom" aria-hidden="true"></div>
+            <div class="cake-plate" aria-hidden="true"></div>
+            <div class="candles" id="candles"><!-- candle buttons injected --></div>
+          </div>
+
+          <p class="cake-count" id="cake-count" role="status" aria-live="polite">5 of 5 candles still lit — make it worth it.</p>
+
+          <div class="wish-card" id="wish-card" hidden>
+            <h3 class="wish-title">Wish received.</h3>
+            <p class="wish-text" data-config="cake.wish">Status: granted. I checked with the universe — turns out she owes me a favour, and she cashed it in for you.</p>
+            <p class="wish-note">Happy birthday, <span data-config="nickname"></span>. Now blow on out of this section — there's still one sealed note waiting below.</p>
+            <button class="btn btn-ghost btn-dark" type="button" id="relight">Relight &amp; replay</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ════════════════ SEALED NOTE · rose at midnight ════════════════ -->
+    <section class="section surprise" id="surprise" data-theme="rose" aria-labelledby="surprise-title">
+      <div class="wrap">
+        <header class="section-head" data-reveal>
+          <div class="orn" aria-hidden="true"><svg class="icon" viewBox="0 0 24 24" fill="currentColor"><path d="M4 6h16a1 1 0 0 1 1 1l-9 6-9-6a1 1 0 0 1 1-1zm-1 3.4 9 6 9-6V18a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V9.4z"/></svg></div>
+          <p class="kicker">chapter six · the smallest mystery on this page</p>
+          <h2 id="surprise-title" data-reveal>One last thing. You have to open it.</h2>
+          <p class="section-intro" data-reveal>
+            The best surprises don't come from screens — they come at you in the real
+            world, wearing a smile. But before that happens, this small wax-sealed
+            something is addressed to you, and it refuses to be ignored.
+          </p>
+        </header>
+
+        <div class="env-zone" data-reveal>
+          <div class="env-wrap" id="env-wrap">
+            <div class="env-card" id="env-card">
+              <p class="env-card-kicker" data-config="envelope.kicker">delivered by a very serious dove</p>
+              <h3 class="env-card-title" data-config="envelope.title">The mini surprise</h3>
+              <ul class="env-card-list" id="env-list"><!-- coupon lines injected --></ul>
+              <p class="env-card-foot" data-config="envelope.foot">Redeemable whenever she looks at you. That offer is often.</p>
+              <button class="btn btn-ghost btn-dark btn-small" type="button" id="env-close">Seal it again</button>
+              <p class="env-card-pull">pull the note down to tuck it away — or press esc</p>
+            </div>
+            <div class="env" role="group" aria-labelledby="seal-label">
+              <div class="env-back" aria-hidden="true"></div>
+              <div class="env-flap" aria-hidden="true"></div>
+              <button class="env-seal" id="env-seal" type="button" aria-expanded="false" aria-controls="env-card" aria-describedby="seal-label">
+                <svg class="icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 21.35 10.55 20.03C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>
+              </button>
+              <div class="env-front" aria-hidden="true">
+                <span class="env-address script" data-config="envelope.address">to meri jaan, with love</span>
+              </div>
+            </div>
+            <span class="env-hint" id="seal-label">break the seal — it's yours</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ════════════════ FINALE · candlelight, full circle ════════════════ -->
+    <section class="section finale" id="finale" data-theme="candle" aria-labelledby="finale-title">
+      <div class="dust" aria-hidden="true"></div>
+      <div class="wrap narrow center">
+        <div class="orn" data-reveal aria-hidden="true"><svg class="icon" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.6 7.1.7-5.4 4.8 1.6 7-6.2-3.7-6.2 3.7 1.6-7L2 9.3l7.1-.7L12 2z"/></svg></div>
+        <h2 id="finale-title" class="finale-title" lang="fr" data-reveal data-config="finale.french">Joyeux anniversaire, mon amour.</h2>
+        <p class="finale-trans" data-reveal data-config="finale.trans">— happy birthday, my love. May this year hand back even a little of the happiness you hand out.</p>
+        <p class="finale-line" data-reveal data-config="finale.closing">Happy birthday, meri jaan. You are, and will always be, my favorite chapter.</p>
+        <div class="finale-heart" data-reveal aria-hidden="true">
+          <svg class="icon" viewBox="0 0 24 24" fill="currentColor"><path d="M12 21.35 10.55 20.03C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>
+        </div>
+        <p class="colophon" data-reveal data-config="finale.madeBy">made by hand, with love and an unreasonable attention span — [your name]</p>
+      </div>
+      <footer class="site-foot">
+        <p>copyright © <span data-year>2026</span> · all rights reserved by the birthday girl, obviously</p>
+      </footer>
+    </section>
+  </main>
+
+  <noscript>
+    <div class="noscript-note">
+      This gift listens for interactions — the quiz, the candles, the sealed note.
+      JavaScript is off right now, so the words still land but the magic stays asleep.
+      Turn it on and everything works.
+    </div>
+  </noscript>
+
+  <script src="config.js" defer></script>
+  <script src="app.js" defer></script>
+</body>
+</html>
